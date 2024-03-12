@@ -5,10 +5,18 @@ let secondCard = 9;
 let sum = firstCard + secondCard;
 console.log(sum);
 
-if (sum < 21) {
-  console.log('Do you want to draw a new card?');
+let hasBlackJack = false;
+let isAlive = true;
+
+let message = '';
+
+if (sum <= 20) {
+  message = 'Do you want to draw a new card?';
 } else if (sum === 21) {
-  console.log('You won!');
+  message = 'You won!';
+  hasBlackJack = true; // change boolean hasBlackJack
 } else {
-  console.log("You're out of the game!");
+  message = "You're out of the game!";
+  isAlive = false;
 }
+console.log(message);
