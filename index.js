@@ -18,9 +18,13 @@ let sumEl = document.querySelector('#sum-el');
 let cardsEl = document.querySelector('#cards-el');
 
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   messageHide.textContent = ''; //hide start tut text
-  cardsEl.textContent += firstCard + ' ' + secondCard; //showing cards on site
-  sumEl.textContent += sum + ' '; //adding sum to p sum
+  cardsEl.textContent = 'Cards: ' + firstCard + ' ' + secondCard; //showing cards on site
+  sumEl.textContent = 'Sum: ' + sum + ' '; //adding sum to p sum
 
   if (sum <= 20) {
     message = 'Do you want to draw a new card?';
@@ -38,5 +42,8 @@ function startGame() {
 // newCard function
 
 function newCard() {
-  console.log('Drawing a new card from the deck!');
+  let thirdCard = 6; //blackjack hardcoded
+  sum += thirdCard;
+  renderGame();
+  cardsEl.textContent += ' ' + thirdCard;
 }
