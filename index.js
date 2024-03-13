@@ -15,9 +15,12 @@ let messageHide = document.getElementById('message-hide');
 // let sumEl = document.getElementById('sum-el');
 let sumEl = document.querySelector('#sum-el');
 
+let cardsEl = document.querySelector('#cards-el');
+
 function startGame() {
-  messageHide.textContent = '';
-  sumEl.textContent += sum + ' ';
+  messageHide.textContent = ''; //hide start tut text
+  cardsEl.textContent += firstCard + ' ' + secondCard; //showing cards on site
+  sumEl.textContent += sum + ' '; //adding sum to p sum
 
   if (sum <= 20) {
     message = 'Do you want to draw a new card?';
@@ -30,4 +33,10 @@ function startGame() {
   }
   // Log out
   messageEl.textContent = message;
+}
+
+// newCard function
+
+function newCard() {
+  console.log('Drawing a new card from the deck!');
 }

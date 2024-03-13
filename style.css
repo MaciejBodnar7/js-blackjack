@@ -38,10 +38,10 @@ h1 {
   margin: 0.3em 0 0 0;
 }
 .subtitle {
-  font-size: 0.8rem;
+  font-size: 0.83rem;
   margin: 0;
   margin-top: -1.3em;
-  margin-left: 16.5em;
+  margin-left: 15.5em;
 }
 p {
   font-size: 1.5rem;
@@ -63,14 +63,19 @@ p {
 .btn {
   padding: 0.7em 1.5em;
   font-weight: 800;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border: 0;
-  border-radius: 200px;
+  border-radius: 10px;
   border: 4px solid gold;
   transition: scale 0.3s;
-  background-color: aliceblue;
+  background-color: white;
   cursor: pointer;
+  color: #212427;
 }
 .btn:hover {
-  scale: 105%;
+  scale: 103%;
+}
+.flex-btn {
+  display: flex;
+  gap: 1em;
 }
