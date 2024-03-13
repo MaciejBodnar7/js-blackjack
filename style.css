@@ -48,7 +48,17 @@ p {
   font-weight: 400;
 }
 #message-el {
-  font-style: italic;
+  font-size: 2rem;
+  font-weight: 400;
+  color: gold;
+  margin-bottom: 0;
+}
+#message-hide {
+  margin-top: 0;
+  font-size: 1rem;
+}
+#message-hide span {
+  font-weight: 700;
 }
 .btn {
   padding: 0.7em 1.5em;
