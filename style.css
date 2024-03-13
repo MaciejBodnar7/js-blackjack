@@ -1,13 +1,66 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: url(img/table.png);
-  background-position: center;
+  background-size: cover;
   background-blend-mode: overlay;
   background-color: #5b5b5b;
   color: white;
+  text-align: center;
+}
+.logo {
+  padding: 0;
+  display: flex;
+  margin: 0 auto;
+  width: 400px;
+  min-width: 400px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+  min-width: 400px;
+  align-items: center;
+  margin-top: 5em;
 }
 h1 {
-  font-size: 2rem;
-  text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+  color: gold;
+  margin: 0.3em 0 0 0;
+}
+.subtitle {
+  font-size: 0.8rem;
+  margin: 0;
+  margin-top: -1.3em;
+  margin-left: 16.5em;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+#message-el {
+  font-style: italic;
+}
+.btn {
+  padding: 0.7em 1.5em;
+  font-weight: 800;
+  font-size: 1.125rem;
+  border: 0;
+  border-radius: 200px;
+  border: 4px solid gold;
+  transition: scale 0.3s;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.btn:hover {
+  scale: 105%;
 }

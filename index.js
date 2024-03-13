@@ -10,15 +10,16 @@ let isAlive = true;
 
 let message = ''; //replacing all consolelog with empty variable and console login once
 
-if (sum <= 20) {
-  message = 'Do you want to draw a new card?';
-} else if (sum === 21) {
-  message = 'You won!';
-  hasBlackJack = true; // change boolean hasBlackJack
-} else {
-  message = "You're out of the game!";
-  isAlive = false;
+function startGame() {
+  if (sum <= 20) {
+    message = 'Do you want to draw a new card?';
+  } else if (sum === 21) {
+    message = 'You won!';
+    hasBlackJack = true; // change boolean hasBlackJack
+  } else {
+    message = "You're out of the game!";
+    isAlive = false;
+  }
+  // Log out
+  console.log(message);
 }
-
-// Log out
-console.log(message);
