@@ -8,7 +8,7 @@ console.log(sum);
 let hasBlackJack = false;
 let isAlive = true;
 
-let message = '';
+let message = ''; //replacing all consolelog with empty variable and console login once
 
 if (sum <= 20) {
   message = 'Do you want to draw a new card?';
@@ -19,4 +19,6 @@ if (sum <= 20) {
   message = "You're out of the game!";
   isAlive = false;
 }
+
+// Log out
 console.log(message);

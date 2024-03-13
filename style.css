@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: url(img/table.png);
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: #5b5b5b;
+  color: white;
+}
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
