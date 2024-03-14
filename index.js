@@ -57,7 +57,7 @@ function renderGame() {
 // newCard function
 
 function newCard() {
-  let thirdCard = 6; // blackjack hardcoded
+  let thirdCard = getRandomCard(); // blackjack hardcoded
   sum += thirdCard;
   cards.push(thirdCard);
   console.log(cards);
