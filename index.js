@@ -1,7 +1,7 @@
 console.log('Maciej B. | 5 - BlackJack project');
 
-let firstCard = 6;
-let secondCard = 9;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let sum = firstCard + secondCard;
 console.log(sum);
 
@@ -20,6 +20,10 @@ let sumEl = document.querySelector('#sum-el');
 let cardsEl = document.querySelector('#cards-el');
 
 // random card generator
+function getRandomCard() {
+  let randomNumber = 5;
+  return randomNumber;
+}
 
 // starting game function
 function startGame() {
