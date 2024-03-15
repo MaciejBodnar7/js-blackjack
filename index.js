@@ -7,7 +7,7 @@ let sum = firstCard + secondCard;
 let cards = [firstCard, secondCard];
 
 let hasBlackJack = false;
-let isAlive = flase; // u need to click start
+let isAlive = false; // u need to click start
 
 let message = ''; // replacing all consolelog with empty variable and console login once
 
