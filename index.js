@@ -3,12 +3,11 @@ console.log('Maciej B. | 5 - BlackJack project');
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
 let sum = firstCard + secondCard;
-console.log(sum);
 
 let cards = [firstCard, secondCard];
 
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = flase; // u need to click start
 
 let message = ''; // replacing all consolelog with empty variable and console login once
 
@@ -21,12 +20,20 @@ let cardsEl = document.querySelector('#cards-el');
 
 // random card generator
 function getRandomCard() {
-  let randomNumber = 5;
-  return randomNumber;
+  let generateRandomNumber = Math.floor(Math.random() * 13) + 1;
+
+  if (generateRandomNumber === 1) {
+    return 11;
+  } else if (generateRandomNumber > 10) {
+    return 10;
+  } else {
+    return generateRandomNumber;
+  }
 }
 
 // starting game function
 function startGame() {
+  isAlive = true;
   renderGame();
 }
 
