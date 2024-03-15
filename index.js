@@ -1,11 +1,7 @@
 console.log('Maciej B. | 5 - BlackJack project');
 
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let sum = firstCard + secondCard;
-
-let cards = [firstCard, secondCard];
-
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
 let isAlive = false; // u need to click start
 
@@ -34,6 +30,10 @@ function getRandomCard() {
 // starting game function
 function startGame() {
   isAlive = true;
+  let firstCard = getRandomCard();
+  let seconsCard = getRandomCard();
+  sum = firstCard + seconsCard;
+  cards.push(firstCard, seconsCard);
   renderGame();
 }
 
