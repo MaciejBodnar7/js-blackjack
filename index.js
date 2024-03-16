@@ -1,11 +1,15 @@
 console.log('Maciej B. | 5 - BlackJack project');
 
+let player = {
+  name: 'NeverLucky',
+  cash: 145,
+};
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false; // u need to click start
 
-let message = ''; // replacing all consolelog with empty variable and console login once
+let message = '';
 
 let messageEl = document.getElementById('message-el');
 let messageHide = document.getElementById('message-hide');
@@ -13,6 +17,11 @@ let messageHide = document.getElementById('message-hide');
 let sumEl = document.querySelector('#sum-el');
 
 let cardsEl = document.querySelector('#cards-el');
+
+let playerEl = document.querySelector('#player-el');
+
+let playerElOne = document.querySelector('#player-el-one');
+let playerElTwo = document.querySelector('#player-el-two');
 
 // random card generator
 function getRandomCard() {
@@ -40,6 +49,9 @@ function startGame() {
 function renderGame() {
   messageHide.textContent = ''; // hide start tut text
   cardsEl.textContent = 'Cards: '; // render cards on site, if not here cars are like 6 9 6 9 6 becouse on evry start its overwriting existing p
+  // playerEl.textContent = player.name + ': ' + player.cash + '$'; // render player object under buttons
+  playerElOne.textContent = player.name + ': ';
+  playerElTwo.textContent = player.cash + '$';
 
   for (let i = 0; i < cards.length; i++) {
     // new way of renderin cards on site
@@ -64,9 +76,13 @@ function renderGame() {
 // newCard function
 
 function newCard() {
-  let thirdCard = getRandomCard(); // blackjack hardcoded
-  sum += thirdCard;
-  cards.push(thirdCard);
-  console.log(cards);
-  renderGame();
+  if (isAlive === true && hasBlackJack === false) {
+    let thirdCard = getRandomCard(); // blackjack hardcoded
+    sum += thirdCard;
+    cards.push(thirdCard);
+    console.log(cards);
+    renderGame();
+  } else {
+    message = 'Y';
+  }
 }

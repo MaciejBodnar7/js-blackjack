@@ -80,3 +80,17 @@ p {
   display: flex;
   gap: 1em;
 }
+#player-el {
+  display: flex;
+  align-items: center;
+}
+#player-el #player-el-one {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#player-el #player-el-two {
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: gold;
+  margin-left: 0.35em;
+}
